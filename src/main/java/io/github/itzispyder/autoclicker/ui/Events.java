@@ -113,8 +113,8 @@ public class Events implements Global {
         float hp = prevHp;
         Vec3d pos = prevPos;
         prevHp = p.getHealth();
-        prevPos = p.getPos();
-
+prevPos = new net.minecraft.util.math.Vec3d(p.getX(), p.getY(), p.getZ());
+    
         if (mc.crosshairTarget instanceof EntityHitResult hit) {
             noTarget = false;
             isBaby = hit.getEntity() instanceof LivingEntity liv && liv.isBaby();
@@ -134,7 +134,7 @@ public class Events implements Global {
             }
             return false;
         }
-        if (Config.stopWhenMove && p.getPos().distanceTo(pos) > 0.1) {
+        if (Config.stopWhenMove && new net.minecraft.util.math.Vec3d(p.getX(), p.getY(), p.getZ()).distanceTo(pos) > 0.1) {
             if (Config.left || Config.right) {
                 Config.write("left", false);
                 Config.write("right", false);
@@ -147,7 +147,7 @@ public class Events implements Global {
 
     public static void send(String msg) {
         if (valid())
-            mc.player.sendMessage(Text.of(("&f[&6Autoclicker&f]&r " + msg).replace('&', '§')));
+            mc.player.sendMessage(Text.of(("&f[&6Autoclicker&f]&r " + msg).replace('&', '§')), false);
     }
 
     public static boolean invalid() {
