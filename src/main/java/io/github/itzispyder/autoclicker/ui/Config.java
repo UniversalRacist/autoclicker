@@ -1,11 +1,13 @@
 package io.github.itzispyder.autoclicker.ui;
 
 import io.github.itzispyder.autoclicker.Global;
-import io.github.itzispyder.improperui.config.ConfigKey;
-import io.github.itzispyder.improperui.config.Properties;
-import io.github.itzispyder.improperui.script.ScriptParser;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Config implements Global {
+
+    private static final Map<String, Object> CONFIG = new HashMap<>();
 
     public static boolean left, right;
     public static boolean leftSpam, rightSpam;
@@ -42,40 +44,40 @@ public class Config implements Global {
         debug = readBool("debug", false);
     }
 
-    public static ConfigKey getKey(String property) {
-        return new ConfigKey(modId, "config.properties", property);
+    /* ---------- simple config helpers ---------- */
+
+    private static Object read(String key) {
+        return CONFIG.get(key);
     }
 
-    public static Properties.Value read(String property) {
-        return ScriptParser.getCache(modId).getProperty(getKey(property));
+    private static void write(String key, Object value) {
+        CONFIG.put(key, value);
     }
 
-    public static void write(String property, Object value) {
-        ScriptParser.getCache(modId).setProperty(getKey(property), value, true);
+    private static boolean readBool(String key, boolean def) {
+        Object v = read(key);
+        if (v == null) {
+            write(key, def);
+            return def;
+        }
+        return (boolean) v;
     }
 
-    public static boolean readBool(String property, boolean def) {
-        var o = read(property);
-        if (o == null)
-            write(property, def);
-        return o != null ? o.first().toBool() : def;
+    private static int readInt(String key, int def) {
+        Object v = read(key);
+        if (v == null) {
+            write(key, def);
+            return def;
+        }
+        return (int) v;
     }
 
-    public static int readInt(String property, int def) {
-        return (int)readDouble(property, def);
-    }
-
-    public static double readDouble(String property, double def) {
-        var o = read(property);
-        if (o == null)
-            write(property, def);
-        return o != null ? o.first().toDouble() : def;
-    }
-
-    public static String readStr(String property, String def) {
-        var o = read(property);
-        if (o == null)
-            write(property, def);
-        return o != null ? o.first().toString() : def;
+    private static double readDouble(String key, double def) {
+        Object v = read(key);
+        if (v == null) {
+            write(key, def);
+            return def;
+        }
+        return (double) v;
     }
 }

@@ -1,0 +1,36 @@
+{
+  "modmenu.nameTranslation.autoclicker": "Universal Auto Clicker",
+
+  "key.autoclicker.toggle": "Toggle Auto Clicker",
+  "key.autoclicker.open_gui": "Open Auto Clicker Settings",
+
+  "screen.autoclicker.title": "Auto Clicker Settings",
+
+  "autoclicker.enabled": "Enabled",
+  "autoclicker.disabled": "Disabled",
+
+  "autoclicker.cps": "Clicks Per Second",
+  "autoclicker.cps.value": "%s CPS",
+
+  "autoclicker.mode": "Mode",
+  "autoclicker.mode.combat": "Combat",
+  "autoclicker.mode.mining": "Mining",
+  "autoclicker.mode.both": "Both",
+
+  "autoclicker.floating": "Floating Button",
+  "autoclicker.floating.on": "Floating Button: ON",
+  "autoclicker.floating.off": "Floating Button: OFF",
+
+  "autoclicker.theme": "Theme",
+  "autoclicker.theme.yellow": "Yellow",
+  "autoclicker.theme.dark": "Dark",
+
+  "autoclicker.button.enable": "Enable",
+  "autoclicker.button.disable": "Disable",
+
+  "autoclicker.hint.toggle": "Press %s to toggle auto clicker",
+  "autoclicker.hint.gui": "Press %s to open settings",
+
+  "autoclicker.slider.min": "Min: 1",
+  "autoclicker.slider.max": "Max: 50"
+}

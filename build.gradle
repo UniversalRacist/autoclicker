@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.14.4'
+    id 'fabric-loom' version '1.9-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -22,8 +22,6 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // ImproperUI - Using Maven coordinates
-    modImplementation files("libs/ImproperUI-${project.minecraft_version}-${project.improperui_version}.jar")
 }
 
 processResources {

@@ -1,4 +1,32 @@
 {
-    "key.autoclicker.toggle": "Toggle AutoClicker",
-    "category.autoclicker": "AutoClicker"
-  }
+  "modmenu.nameTranslation.autoclicker": "Auto Clicker",
+
+  "key.autoclicker.toggle_left": "Toggle Left Click",
+  "key.autoclicker.toggle_right": "Toggle Right Click",
+  "key.autoclicker.open_gui": "Open AutoClicker GUI",
+
+  "category.autoclicker": "Auto Clicker",
+
+  "gui.autoclicker.title": "Auto Clicker",
+  "gui.autoclicker.left_click": "Left Click",
+  "gui.autoclicker.right_click": "Right Click",
+
+  "gui.autoclicker.enabled": "Enabled",
+  "gui.autoclicker.disabled": "Disabled",
+
+  "gui.autoclicker.left_cps": "Left CPS",
+  "gui.autoclicker.right_cps": "Right CPS",
+
+  "gui.autoclicker.left_key": "Left Toggle Key",
+  "gui.autoclicker.right_key": "Right Toggle Key",
+  "gui.autoclicker.gui_key": "GUI Key",
+
+  "gui.autoclicker.min_cps": "Min CPS",
+  "gui.autoclicker.max_cps": "Max CPS",
+
+  "gui.autoclicker.theme": "Theme",
+  "gui.autoclicker.theme.yellow": "Yellow (Mobile)",
+  "gui.autoclicker.theme.dark": "Dark",
+
+  "gui.autoclicker.close": "Close"
+}
